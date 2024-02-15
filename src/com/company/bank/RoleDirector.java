@@ -7,6 +7,9 @@ import com.company.bank.services.BankServices;
 import com.company.bank.services.UserServices;
 
 public class RoleDirector {
+    
+    	
+    
 	int userRole;
 	String userName;
 	UserServices uServices=new UserServices();
@@ -75,16 +78,15 @@ public class RoleDirector {
 			}
 			else {
 				System.out.println("No such username Exists");
-			}
-			break;
+			}	break;
 
 		case 3:
 			helpAndSupport();
 			break;
 		default:
 			System.out.println("Enter valid choice");
-		}
 		
+		}
 		sc.close();
 		
 

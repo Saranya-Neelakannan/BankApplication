@@ -3,6 +3,7 @@ package com.company.bank.services;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+import com.company.bank.RoleDirector;
 import com.company.bank.data.user.User;
 
 public class UserServices {
@@ -11,6 +12,7 @@ public class UserServices {
 	Scanner sc=new Scanner(System.in);
 	
 	private static LinkedList<User> userList = new LinkedList<User>();
+	RoleDirector obj=new RoleDirector();
 
 	
 	static {
@@ -72,7 +74,7 @@ public class UserServices {
 		System.out.println("Do you want to continue Y/y or N/n");
 		execute=sc.next().charAt(0);
 		if(execute=='n'||execute=='N') {
-			director();
+			obj.director();
 		}
 		}
 		

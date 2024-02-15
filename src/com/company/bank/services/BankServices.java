@@ -7,13 +7,13 @@ import com.company.bank.banksupport.BankStatement;
 import com.company.bank.banksupport.Complaint;
 import com.company.bank.data.config.BankConfigData;
 import com.company.bank.data.user.User;
-
+import com.company.bank.*;
 public class BankServices {
 
     ArrayList<BankStatement> bankStatements=new ArrayList<>();
     private static ArrayList<Complaint> complaints=new ArrayList<>();
     
-    
+           RoleDirector obj=new RoleDirector();
    			User userData=new User();
 			BankConfigData bankData=new BankConfigData();
 			
@@ -147,6 +147,10 @@ public class BankServices {
 						}
 						System.out.println("Do you want to continue ? Enter Y/y or N/n");
 						ch=sc.next().charAt(0);
+						if(ch=='N'||ch=='n')
+						{
+							obj.director();
+						}
 											}
 												
 					}
